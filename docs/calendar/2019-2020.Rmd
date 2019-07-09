@@ -1,0 +1,128 @@
+---
+title: "AP^&reg;^ Calculus Calendar (Mr. Li's Classes)"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    navbar:
+      - {title: "AP<sup>&reg;</sup> Calculus Main Website (Mr. Li)", href: "https://scholar.netlify.com/calculus" }
+      - {title: "AB Syllabus", href: "https://scholar.netlify.com/calc-ab" }
+      - {title: "BC Syllabus", href: "https://scholar.netlify.com/calc-bc" }
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Calculus AB
+===================================== 
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### <b>2019--2020 Calculus <span style="color:Crimson">AB</span> Calendar</b>
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(openair)
+
+ab <- tibble(date= as.Date(c("2019-09-02")), val = c(4),
+              item = c("Placeholder"))
+
+ab <- ab %>% 
+  add_row(date = "2019-10-01", val = 4, item = "") %>%
+  add_row(date = "2019-11-01", val = 4, item = "") %>%
+  add_row(date = "2019-12-01", val = 4, item = "") %>%
+  add_row(date = "2020-01-01", val = 4, item = "") %>%
+  add_row(date = "2020-02-01", val = 4, item = "") %>%
+  add_row(date = "2020-03-01", val = 4, item = "") %>%
+  add_row(date = "2020-04-01", val = 4, item = "") %>%
+  add_row(date = "2020-05-05", val = 3, item = "<a href = 'https://apcentral.collegeboard.org/courses/exam-dates-and-fees/exam-dates-2020'>AP Calculus AB Exam</a> (8 a.m.)")
+
+ab <- ab %>% add_column(month = as.factor(month(ab$date)), year = as.factor(year(ab$date)))
+
+calendarPlot(ab, pollutant = "val", year =c(2019,2020), annotate = "date", breaks = c(0,1,2,3), labels = c("Unit Progress","Practice Exams","Exams"), w.shift = 1,
+             cols = c("lightblue","gold","lightcoral"))
+```
+
+> \*AP is a registered trademark of the College Board, which was not involved in the production of this webpage. The dates in this calendar apply only to Mr. Li's calculus classes.
+
+
+Column {data-width=450, .tabset}
+-----------------------------------------------------------------------
+### <b>Calculus <span style="color:Crimson">AB</span> Dates</b>
+
+```{r}
+library(DT)
+ab2 <- rename(ab, Date = date, Year = year, Month = month, Item = item, Type = val)
+ab2 <- ab2[,c("Date","Item","Type","Month","Year")]
+ab2 <- ab2 %>% filter(Type<4)
+ab2$Type <- as.factor(ab2$Type)
+# sch2 <- sch[,c("Date","Year","Month","Item")]
+datatable(ab2, filter = 'top', escape = FALSE, options = list(
+  pageLength = 15, autoWidth = TRUE, scrollX = TRUE, 
+  columnDefs = list(list(width='250px', targets=2),
+                    list(width='5px', targets=c(3,4,5))) )) %>%
+  formatStyle("Type", 
+              backgroundColor = styleEqual(c(1,2,3), c("lightblue","gold","lightcoral")))
+```
+
+> Filter by Type (1 = Unit Progress, 2 = Practice Exams, 3 = Exams)
+
+Calculus BC
+===================================== 
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### <b>2019--2020 Calculus <span style="color:#3498db">BC</span> Calendar</b>
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(openair)
+
+bc <- tibble(date= as.Date(c("2019-09-02")), val = c(4),
+              item = c("Placeholder"))
+
+bc <- bc %>% 
+  add_row(date = "2019-10-01", val = 4, item = "") %>%
+  add_row(date = "2019-11-01", val = 4, item = "") %>%
+  add_row(date = "2019-12-01", val = 4, item = "") %>%
+  add_row(date = "2020-01-01", val = 4, item = "") %>%
+  add_row(date = "2020-02-01", val = 4, item = "") %>%
+  add_row(date = "2020-03-01", val = 4, item = "") %>%
+  add_row(date = "2020-04-01", val = 4, item = "") %>%
+  add_row(date = "2020-05-05", val = 3, item = '<a href="https://apcentral.collegeboard.org/courses/exam-dates-and-fees/exam-dates-2020">AP Calculus BC Exam</a> (8 a.m.)')
+
+bc <- bc %>% add_column(month = as.factor(month(bc$date)), year = as.factor(year(bc$date)))
+
+calendarPlot(bc, pollutant = "val", year =c(2019,2020), annotate = "date", breaks = c(0,1,2,3), labels = c("Unit Progress","Practice Exams","Exams"), w.shift = 1,
+             cols = c("lightblue","gold","lightcoral"))
+```
+
+> \*AP is a registered trademark of the College Board, which was not involved in the production of this webpage. The dates in this calendar apply only to Mr. Li's calculus classes.
+
+
+Column {data-width=450, .tabset}
+-----------------------------------------------------------------------
+### <b>Calculus <span style="color:#3498db">BC</span> Dates</b>
+
+```{r}
+library(DT)
+bc2 <- rename(bc, Date = date, Year = year, Month = month, Item = item, Type = val)
+bc2 <- bc2[,c("Date","Item","Type","Month","Year")]
+bc2 <- bc2 %>% filter(Type<4)
+bc2$Type <- as.factor(bc2$Type)
+
+# sch2 <- sch[,c("Date","Year","Month","Item")]
+datatable(bc2, filter = 'top', escape = FALSE, options = list(
+  pageLength = 15, autoWidth = TRUE, scrollX = TRUE, 
+  columnDefs = list(list(width='250px', targets=2),
+                    list(width='5px', targets=c(3,4,5))) )) %>%
+  formatStyle("Type", 
+              backgroundColor = styleEqual(c(1,2,3), c("lightblue","gold","lightcoral")))
+```
+
+> Filter by Type (1 = Unit Progress, 2 = Practice Exams, 3 = Exams)
