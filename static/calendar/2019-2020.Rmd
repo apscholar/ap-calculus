@@ -5,9 +5,9 @@ output:
     orientation: columns
     vertical_layout: fill
     navbar:
-      - {title: "AP<sup>&reg;</sup> Calculus Main Website (Mr. Li)", href: "https://scholar.netlify.com/calculus" }
-      - {title: "AB Syllabus", href: "https://scholar.netlify.com/calc-ab" }
-      - {title: "BC Syllabus", href: "https://scholar.netlify.com/calc-bc" }
+      - {title: "AP<sup>&reg;</sup> Calculus Main Website (Mr. Li)", href: "https://ap-calculus.github.io" }
+      - {title: "AB Schedule", href: "https://ap-calculus.github.io/ab" }
+      - {title: "BC Schedule", href: "https://ap-calculus.github.io/bc" }
 ---
 
 ```{r setup, include=FALSE}

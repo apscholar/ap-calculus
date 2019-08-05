@@ -2,16 +2,27 @@
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
 #     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
-
 [[main]]
-  name = "Calculus AB"
+  name = "Syllabus"
+  url = "syllabus/"
+  weight = 5
+  
+[[main]]
+  name = "AB Schedule"
   url = "ab/"
   weight = 10
 
 [[main]]
-  name = "Calculus BC"
+#  identifier = "bc"
+  name = "BC Schedule"
   url = "bc/"
   weight = 11
+  
+#[[main]]
+#  parent = "bc"
+#  name = "Unit 1"
+#  url = "bc/unit1"
+#  weight = 11
   
 [[main]]
   name = "Calendar"
@@ -27,15 +38,15 @@
   url = "post/"
   weight = 20
 
-#[[main]]
-#  name = "Projects"
-#  url = "#projects"
-#  weight = 40
-
 [[main]]
-  name = "Documents"
-  url = "publication/"
-  weight = 30
+  name = "Portfolio"
+  url = "portfolio/"
+  weight = 25
+
+#[[main]]
+#  name = "Documents"
+#  url = "publication/"
+#  weight = 30
 
 #[[main]]
 #  name = "Tutorials"
@@ -47,10 +58,10 @@
 #  url = "talk/"
 #  weight = 50
 
-[[main]]
-  name = "Resources"
-  url = "resources/"
-  weight = 40
+#[[main]]
+#  name = "Resources"
+#  url = "resources/"
+#  weight = 40
   
 [[main]]
   name = "Office Hours"

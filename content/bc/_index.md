@@ -6,5 +6,4 @@ layout: docs
 title: ""
 ---
 
-
-<iframe src="https://ap-calculus.github.io/bc-syllabus/" style="position: absolute; left:0; height: 100%; width: 100%; border: none"></iframe> 
+<iframe allowtransparency="false" src="https://ap-calculus.github.io/bc-schedule/" style="right: 5px; background: #FFFFFF; position: absolute; height: 80%; width: 95%; border: none"></iframe> 
