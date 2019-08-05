@@ -17,7 +17,7 @@ height = ""
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Welcome to Mr. Li's Calculus Course"
-  content = "2019--2020"
+  content = "2019--2020<br><br>"
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -29,23 +29,36 @@ height = ""
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
-  # cta_label = "Latest Announcements"
-  # cta_url = "#posts"
-  # cta_icon_pack = "fas"
-  # cta_icon = "graduation-cap"
+  cta_label = "Mr. Li's Main Site"
+  cta_url = "https://apscholar.github.io"
+  cta_icon_pack = "fas"
+  cta_icon = "graduation-cap"
 
 [[item]]
-  title = "Mr. Li"
-  content = "Main Teaching Website"
-  align = "left"
+  title = "College Board"
+  content = "AP<sup>&reg;</sup> Calculus AB Website"
+  align = "right"
 
   overlay_color = "royalblue"  # An HTML color value.
   overlay_img = ""  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.3  # Darken the image. Value in range 0-1.
 
   cta_label = "Link"
-  cta_url = "https://scholar.netlify.com"
+  cta_url = "https://apcentral.collegeboard.org/courses/ap-calculus-ab"
   cta_icon_pack = "fas"
   cta_icon = "graduation-cap"
 
+[[item]]
+  title = "College Board"
+  content = "AP<sup>&reg;</sup> Calculus BC Website"
+  align = "right"
+
+  overlay_color = "royalblue"  # An HTML color value.
+  overlay_img = ""  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.3  # Darken the image. Value in range 0-1.
+
+  cta_label = "Link"
+  cta_url = "https://apcentral.collegeboard.org/courses/ap-calculus-bc"
+  cta_icon_pack = "fas"
+  cta_icon = "graduation-cap"
 +++
