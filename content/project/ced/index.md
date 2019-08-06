@@ -12,7 +12,7 @@ links:
 # - name: Details
 #   url: ""
 # slides: example
-summary: Exam Overview (p. 223), Sample Exam Questions (p. 228-239)
+summary: Exam Overview (p. 223) <br> Sample Exam Questions (p. 228-239)
 tags:
 - College Board
 title: AP Calculus AB & BC Course and Exam Description
