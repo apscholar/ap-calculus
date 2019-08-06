@@ -1,6 +1,6 @@
 ---
 date: "2019-06-13T00:00:00Z"
-external_link: http://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx
+external_link: http://http://tutorial.math.lamar.edu/Classes/CalcII/CalcII.aspx
 image:
   caption: 
   focal_point: Smart

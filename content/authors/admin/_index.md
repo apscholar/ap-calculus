@@ -27,9 +27,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
-- icon: link
+- icon: home
   icon_pack: fas
-  link: https://scholar.netlify.com
+  link: https://ap-calculus.github.io
 # - icon: twitter
 #   icon_pack: fab
 #   link: 
