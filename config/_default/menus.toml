@@ -8,15 +8,15 @@
   weight = 5
   
 [[main]]
-  name = "AB Schedule"
+  name = "Schedule"
   url = "ab/"
   weight = 10
 
-[[main]]
+#[[main]]
 #  identifier = "bc"
-  name = "BC Schedule"
-  url = "bc/"
-  weight = 11
+#  name = "BC Schedule"
+#  url = "bc/"
+#  weight = 11
   
 #[[main]]
 #  parent = "bc"
@@ -24,10 +24,10 @@
 #  url = "bc/unit1"
 #  weight = 11
   
-[[main]]
-  name = "Calendar"
-  url = "calendar/2019-2020.html"
-  weight = 15  
+#[[main]]
+#  name = "Calendar"
+#  url = "calendar/2019-2020.html"
+#  weight = 15  
 #[[main]]
 #  name = "Course"
 #  url = "course/"
