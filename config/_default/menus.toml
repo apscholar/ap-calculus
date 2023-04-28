@@ -9,7 +9,7 @@
   
 [[main]]
   name = "Schedule"
-  url = "ab/"
+  url = "schedule/"
   weight = 10
 
 #[[main]]
